@@ -10,7 +10,7 @@ The [FaceScrub](http://vintage.winklerbros.net/facescrub.html) dataset and the V
 The images for cnn are aligned and data-augmented(whitening, flipping, random cropped) ,size : 160*160. Because there are some bad and wrong-classe images images from internet, some scripts are to judge whether the current image is the right one, based on the comparisoin between the bunding box of face detecting algorithm and given one. I tried diffenent solutions for fae alignment : ccv2+dlib and [Multi-task CNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html). The mtcnn is better
 
 ## Performance
-My environment ： ubuntu 16 + tensorlow + cuda 8.0 + E3 v5 + gtx 1070. The final size of training dateset is abuot 0.8M , batch size: 64, epoches: 100. It takes about 15 hours to complete the training.The accuracy on LFW for the model [20161116-234200](https://drive.google.com/file/d/0B5MzpY9kBtDVSTgxX25ZQzNTMGc/view?usp=sharing) reached 98.5%(see roc curve in data/picture_1.png) 
+My environment ： ubuntu 16 + tensorlow + cuda 8.0 + E3 v5 + gtx 1070. The final size of training dateset is abuot 0.8M , batch size: 64, epoches: 100. It takes about 15 hours to complete the training.The accuracy on LFW for the model reached 98.5%(see roc curve in data/picture_1.png) 
 
 ## Inspired
 The code is heavly inspired by the project of davidsandberg
