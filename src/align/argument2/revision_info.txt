@@ -1,0 +1,25 @@
+arguments: /home/lyn/facenet/src/align/align_dataset_mtcnn.py argument1 argument2
+--------------------
+git hash: 4d9371941210d756f15dc1b49080f521c08d998d
+--------------------
+diff --git a/src/align/align_dataset_mtcnn.py b/src/align/align_dataset_mtcnn.py
+index 8aec1ac..613abc9 100644
+--- a/src/align/align_dataset_mtcnn.py
++++ b/src/align/align_dataset_mtcnn.py
+@@ -126,8 +126,8 @@ def main(args):
+ def parse_arguments(argv):
+     parser = argparse.ArgumentParser()
+     
+-    parser.add_argument('input_dir', type=str, help='Directory with unaligned images.')
+-    parser.add_argument('output_dir', type=str, help='Directory with aligned face thumbnails.')
++    parser.add_argument('input_dir', type=str, help='Directory with unaligned images.',default = r'/media/lyn/E:/out/')
++    parser.add_argument('output_dir', type=str, help='Directory with aligned face thumbnails.',default=r'/ media / lyn / E: / ali_faces_182/')
+     parser.add_argument('--image_size', type=int,
+         help='Image size (height, width) in pixels.', default=182)
+     parser.add_argument('--margin', type=int,
+@@ -139,4 +139,5 @@ def parse_arguments(argv):
+     return parser.parse_args(argv)
+ 
+ if __name__ == '__main__':
++    sys.argv = [sys.argv[0], 'argument1', 'argument2']
+     main(parse_arguments(sys.argv[1:]))
