@@ -4,7 +4,7 @@ This is a TensorFlow implementation of the face recognizer base on the paper
 
 
 ## Training data
-The [FaceScrub](http://vintage.winklerbros.net/facescrub.html) dataset and the VGG dataset ["Deep Face Recognition"](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf). There are about 100,000 image links and 2.2M links in the two sources. But due to the dead links and network situatoin, i got 2M images including some truncate ones in 2 days.
+The [FaceScrub](http://vintage.winklerbros.net/facescrub.html) dataset and the VGG dataset ["Deep Face Recognition"](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf). There are about 100,000 image links and 2.2M links in the two sources. But due to the dead links and network situatoin, i downloaded 2M images including some truncate ones in 2 days.
 
 ## Pre-processing
 The images for cnn are aligned and data-augmented(whitening, flipping, random cropped) ,size : 160*160. Because there are some bad and wrong-classe images images from internet, some scripts are to judge whether the current image is the right one, based on the comparisoin between the bunding box of face detecting algorithm and given one. I tried diffenent solutions for fae alignment : ccv2+dlib and [Multi-task CNN](https://kpzhang93.github.io/MTCNN_face_detection_alignment/index.html). The mtcnn is better
